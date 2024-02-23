@@ -3,6 +3,7 @@ package fr.armotik.louise;
 import fr.armotik.louise.commands.AlertCommand;
 import fr.armotik.louise.commands.ClearChatCommand;
 import fr.armotik.louise.commands.RankCommand;
+import fr.armotik.louise.commands.ToggleChatCommand;
 import fr.armotik.louise.listeners.EventManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,7 +12,7 @@ import java.util.logging.Logger;
 
 public final class Louise extends JavaPlugin {
 
-    private Louise instance;
+    private static Louise instance;
     private final Logger logger = Logger.getLogger(Louise.class.getName());
     public static final String PREFIX = "§7[§aLouise§7] : ";
 
@@ -37,7 +38,17 @@ public final class Louise extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    public Louise getInstance() {
+    /**
+     * Get the instance of the plugin
+     * Singleton pattern
+     * @return instance
+     */
+    public static Louise getInstance() {
+
+        if (instance == null) {
+            instance = new Louise();
+        }
+
         return instance;
     }
 }

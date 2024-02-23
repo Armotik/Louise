@@ -1,6 +1,6 @@
 package fr.armotik.louise.listeners;
 
-import fr.armotik.louise.Louise;
+import fr.armotik.louise.louise.LouiseModeration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +18,7 @@ public class EventManager implements Listener {
             if(!chatStatus && !player.hasPermission("naurellia.staff.helper")) {
 
                 event.setCancelled(true);
-                player.sendMessage(Louise.PREFIX + "§cThe chat is currently disabled.");
+                player.sendMessage(LouiseModeration.chatDisabled());
             }
     }
 
@@ -26,7 +26,7 @@ public class EventManager implements Listener {
         return chatStatus;
     }
 
-    public static void setChatStatus(boolean chatStatus) {
-        chatStatus = chatStatus;
+    public static void setChatStatus(boolean newStatus) {
+        chatStatus = newStatus  ;
     }
 }

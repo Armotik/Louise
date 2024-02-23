@@ -1,5 +1,6 @@
-package fr.armotik.louise;
+package fr.armotik.louise.commands;
 
+import fr.armotik.louise.Louise;
 import fr.armotik.louise.listeners.EventManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
