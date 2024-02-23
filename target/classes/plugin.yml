@@ -1,0 +1,25 @@
+name: Louise
+version: '1.0-SNAPSHOT'
+main: fr.armotik.louise.Louise
+api-version: '1.20'
+load: STARTUP
+authors: [Armotik]
+commands:
+  clearchat:
+    description: clear the chat
+    permission: naurellia.staff.helper
+    aliases:
+      - cc
+  togglechat:
+    description: toggle the chat
+    permission: naurellia.staff.helper
+    aliases:
+      - tc
+  alert:
+    description: alert a message
+    permission: naurellia.staff.admin
+    aliases:
+      - al
+  rank:
+    description: get player rank
+    permission: naurellia.player.player
